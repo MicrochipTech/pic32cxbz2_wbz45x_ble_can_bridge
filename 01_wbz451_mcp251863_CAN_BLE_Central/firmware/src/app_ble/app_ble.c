@@ -201,7 +201,9 @@ void APP_BleConfigBasic()
 {
 
     BLE_GAP_Addr_T devAddr;
-    devAddr.addrType = BLE_GAP_ADDR_TYPE_PUBLIC;
+    if (!IB_GetBdAddr(&devAddr.addr[0]) )
+    {
+        devAddr.addrType = BLE_GAP_ADDR_TYPE_PUBLIC;
     devAddr.addr[5] = 0xC1;
     devAddr.addr[4] = 0xC2;
     devAddr.addr[3] = 0xC3;
@@ -209,8 +211,9 @@ void APP_BleConfigBasic()
     devAddr.addr[1] = 0xC5;
     devAddr.addr[0] = 0xC6;
 
-    // Configure device address
-    BLE_GAP_SetDeviceAddr(&devAddr);
+        // Configure device address
+        BLE_GAP_SetDeviceAddr(&devAddr);
+    }
 
 }
 void APP_BleConfigAdvance()

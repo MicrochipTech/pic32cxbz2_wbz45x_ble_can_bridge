@@ -175,8 +175,8 @@ void APP_TrspsEvtHandler(BLE_TRSPS_Event_T *p_event)
     }
 }
 ```
-- Update the app.c and app.h files as shown in the demo application.\
-	- Add the following code in app.c file and update the APP_Tasks function with following code.\
+- Update the app.c and app.h files as shown in the demo application.
+	- Add the following code in app.c file and update the APP_Tasks function with following code.
 
 
 ```c
@@ -473,7 +473,61 @@ void APP_Tasks ( void )
     }
 }
 ```
+- Update app.h as shown below.
+```c
+#define MAX_TXQUEUE_ATTEMPTS        10
+#define DRV_CANFDSPI_INDEX_0        canSPIHandle
 
+    // Transmit Channels
+#define APP_TX_FIFO CAN_FIFO_CH2
+
+// Receive Channels
+#define APP_RX_FIFO CAN_FIFO_CH1
+
+typedef enum
+{
+    /* Application's state machine's initial state. */
+    APP_STATE_INIT=0,
+    APP_STATE_SERVICE_TASKS,
+    APP_STATE_TEST_RAM,
+
+} APP_STATES;
+
+typedef enum APP_MsgId_T
+{
+    APP_MSG_BLE_STACK_EVT,
+    APP_MSG_BLE_STACK_LOG,
+    APP_MSG_ZB_STACK_EVT,
+    APP_MSG_ZB_STACK_CB,
+    APP_MSG_BLE_CONN_EVT,
+    APP_MSG_CAN_RECV_CB,
+    APP_MSG_BLE_TX_CAN_RX_EVT,
+    APP_MSG_BLE_RX_CAN_TX_EVT,
+    APP_MSG_STACK_END
+} APP_MsgId_T;
+```
+- In APP_BleConfigBasic() function in app_ble.c file, add the following code as shown below.
+```c
+void APP_BleConfigBasic()
+{
+
+    BLE_GAP_Addr_T devAddr;
+    if (!IB_GetBdAddr(&devAddr.addr[0]) )
+    {
+        devAddr.addrType = BLE_GAP_ADDR_TYPE_PUBLIC;
+    devAddr.addr[5] = 0xC1;
+    devAddr.addr[4] = 0xC2;
+    devAddr.addr[3] = 0xC3;
+    devAddr.addr[2] = 0xC4;
+    devAddr.addr[1] = 0xC5;
+    devAddr.addr[0] = 0xC6;
+
+        // Configure device address
+        BLE_GAP_SetDeviceAddr(&devAddr);
+    }
+
+
+```
 
 **Step 13** - Clean and build the project. To run the project, select "Make and program device" button.
 
