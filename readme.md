@@ -140,6 +140,9 @@ Follow the steps provided in the link to [Build and program the application](htt
 - Similarly Open another instance of Microchip CAN Bus Analyzer tool and configure the tool as mentioned in above steps
 - Click on Send Button in Transmit window to send the data from CAN
 - Observe the data is being received on other instance of CAN Analyzer
+- The below video shows the working of the CAN-BLE bridge.
+
+![Alt Text](Docs/CAN_Working_Demo.gif)
 
 ## Connecting CAN Network to Mobile App (MBD App)
 - Program a WBZ451 Curiosity board with bleCan_Central application and other with WBZ451 Curiosity board with bleCan_Peripheralapplication.
@@ -177,3 +180,6 @@ Follow the steps provided in the link to [Build and program the application](htt
 
 ![MBD_APP_7](Docs/MBD_APP_7.png)
 
+- The below video shows the working of the CAN-BLE bridge using MBD application.
+
+![Alt Text](Docs/MBD_CAN.gif)
