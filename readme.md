@@ -145,7 +145,8 @@ Follow the steps provided in the link to [Build and program the application](htt
 ![Alt Text](Docs/CAN_Working_Demo.gif)
 
 ## Connecting CAN Network to Mobile App (MBD App)
-- Program a WBZ451 Curiosity board with bleCan_Central application and other with WBZ451 Curiosity board with bleCan_Peripheralapplication.
+
+- Program a WBZ451 Curiosity board with bleCan_Peripheralapplication.
 - Connect MCP251863 CLICK to Mikroe Header in WBZ451 Curiosity board as per the [Hardware Setup](#step3)
 - Connect [CAN BUS ANALYZER TOOL](https://www.microchip.com/en-us/development-tool/APGDT002) to MCP251863 CLICK board using a DB9 Connector as shown in the [figure](Docs/can_ble_setup.png).
 - Open Microchip MBD Application on Mobile phone and click on BLE Smart to scan for the available devices.
