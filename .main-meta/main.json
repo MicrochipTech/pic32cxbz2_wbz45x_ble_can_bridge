@@ -4,7 +4,7 @@
     "content": {
         "metaDataVersion": "1.3.0",
         "name": "com.microchip.mplabx.project.pic32cxbz2_wbz45x_ble_can_bridge",
-        "version": "1.0.1",
+        "version": "2.0.0",
         "displayName": "WBZ45x BLE to CAN Bridge using MCP251863",
         "projectName": "pic32cxbz2_wbz45x_ble_can_bridge",
         "shortDescription": "This application serves as an illustration of how to extend a CAN network wirelessly using BLE. The CAN-BLE Central Device connects to the CAN-BLE Peripheral Device and establishes a BLE link using Microchip's proprietary Transparent UART Profile for CAN data transfer.",
