@@ -1,0 +1,58 @@
+{
+    "metaDataVersion": "1.0.0",
+    "category": "com.microchip.ide.project",
+    "content": {
+        "metaDataVersion": "1.3.0",
+        "name": "com.microchip.mplabx.project.pic32cxbz2_wbz45x_ble_can_bridge",
+        "version": "1.0.1",
+        "displayName": "WBZ45x BLE to CAN Bridge using MCP251863",
+        "projectName": "pic32cxbz2_wbz45x_ble_can_bridge",
+        "shortDescription": "This application serves as an illustration of how to extend a CAN network wirelessly using BLE. The CAN-BLE Central Device connects to the CAN-BLE Peripheral Device and establishes a BLE link using Microchip's proprietary Transparent UART Profile for CAN data transfer.",
+        "ide": {
+            "name": "MPLAB X",
+            "semverRange": ">=6.00"
+        },
+        "compiler": [
+            {
+                "name": "XC32",
+                "semverRange": "^4.10.0"
+            }
+        ],
+        "dfp": {
+            "name": "PIC32CX-BZ_DFP",
+            "semverRange": "^1.0.107"
+        },
+        "configurator": {
+            "name": "MCC",
+            "semverRange": ">=5.1.17"
+        },
+        "device": {
+            "metaDataVersion": "1.0.0",
+            "category": "com.microchip.portal.contentRef",
+            "content": {
+                "metaDataVersion": "1.0.0",
+                "category": "com.microchip.device",
+                "name": " PIC32CX-BZ2",
+                "versionRange": "*"
+            }
+        },
+        "author": "Sankar Mohan",
+        "peripherals": [
+            "SERCOM"
+        ],
+        "keywords": [
+             "IoT","BLE","MPLAB X","XC32","SERCOM","MCC","Wireless","Development Tool","Bluetooth","CAN","Wired","Communication"
+        ],
+        "additionalData": {
+            "longDescription": {
+                "metaDataVersion": "1.0.0",
+                "category": "com.microchip.portal.fileRef",
+                "content": {
+                    "metaDataVersion": "1.0.0",
+                    "fileName": "./README.md",
+                    "mimeType": "text/markdown"
+                }
+            }
+        }
+    }
+}
