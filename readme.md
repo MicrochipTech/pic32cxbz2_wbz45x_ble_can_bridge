@@ -1,4 +1,4 @@
-# WBZ45x BLE to CAN Bridge using MCP251863
+# PIC32CXBZ2_WBZ45x BLE to CAN Bridge using MCP251863
 
 <img src="Docs/IoT-Made-Easy-Logo.png" width=100>
 
